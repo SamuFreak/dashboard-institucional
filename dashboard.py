@@ -31,7 +31,7 @@ st.markdown("""
 SCOPE = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
 
 try:
-    creds = ServiceAccountCredentials.from_json_keyfile_name('tu_archivo_json.json', SCOPE)
+    creds = ServiceAccountCredentials.from_json_keyfile_name('/mount/src/dashboard-institucional/tu_archivo_json.json', SCOPE)
     client = gspread.authorize(creds)
     sheet = client.open_by_key("1mAA4Uu7m6UqHvc9X6zysMpkU0hDKBze7HcHDDJIHuEE")
     st.success("✅ Conectado exitosamente a Google Sheets.")
